@@ -1,12 +1,18 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
+// "user": "knowledgebiz_root",
+// "password": "Knoeledgebiz@2023",
+// "database": "knowledgebiz_db",
+// "host": "104.211.30.63",
+// "port": "3389"
+
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  "dev_report",
+  "knowledgebiz_root",
+  "Dev@2023",
   {
-    host: process.env.DB_HOST,
+    host: "report-mysql-azure.mysql.database.azure.com",
     dialect: "mysql",
   }
 );
